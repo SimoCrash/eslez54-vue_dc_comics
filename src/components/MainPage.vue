@@ -2,7 +2,15 @@
   <main>
     <div class="main-top"></div>
     <div class="main-center">
-        
+        <div class="container-card-film">
+            <cardFilm
+            v-for="objCard in arrCards"
+            :key="objCard.series"
+            class="card-film"
+            :img-film="objCard.thumb"
+            :title-film="objCard.series"
+            />
+        </div>
     </div>
     <div class="main-bottom">
         <ul>
@@ -32,8 +40,13 @@
 </template>
 
 <script>
+import cardFilm from '@/components/cardFilm.vue';
+
 export default {
     name: 'MainPage',
+    components: {
+        cardFilm,
+    },
     data(){
         return {
             arrCards: [
@@ -128,6 +141,22 @@ export default {
         display: flex;
         align-items: center;
     }
+
+    .main-center {
+        background-color: #1C1C1C;
+        .container-card-film {
+            max-width: $width-max;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+    }
+    .card-film {
+        width: calc((100% / 6) - 1rem);
+        }
     .main-bottom {
         background-color: #0282F9;
         ul {
