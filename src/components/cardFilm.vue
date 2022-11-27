@@ -22,11 +22,12 @@ export default {
         background-color: #1c1c1c;
         img {
             max-width: 100%;
-            margin-bottom: 1rem;
+            margin-bottom: 0.4rem;
         }
         h4 {
             text-transform: uppercase;
             color: white;
+            margin-top: 10px;
         }
     }
 </style>

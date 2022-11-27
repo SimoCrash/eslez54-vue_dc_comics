@@ -1,6 +1,12 @@
 <template>
   <main>
-    <div class="main-top"></div>
+    <div class="main-top">
+        <div class="container-bg">
+            <div class="c-series">
+            <h1>current series</h1>
+        </div>
+        </div>
+    </div>
     <div class="main-center">
         <div class="container-card-film">
             <cardFilm
@@ -138,13 +144,29 @@ export default {
         background-size: cover;
         height: 400px;
         width: 100%;
-        display: flex;
-        align-items: center;
+        .container-bg {
+            max-width: $width-max;
+            height: 100%;
+            margin: auto;
+            position: relative;
+            .c-series {
+                position: absolute;
+                bottom: -10%;
+                background-color: #0282F9;
+                h1 {
+                    color: white;
+                    padding: .5rem;
+                    text-transform: uppercase;
+                }
+            }
+       
+        }
     }
 
     .main-center {
         background-color: #1C1C1C;
         .container-card-film {
+            padding: 4rem;
             max-width: $width-max;
             margin: auto;
             display: flex;
