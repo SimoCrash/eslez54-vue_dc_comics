@@ -17,6 +17,9 @@
             :title-film="objCard.series"
             />
         </div>
+        <div class="load-more">
+            <h2>load more</h2>
+        </div>
     </div>
     <div class="main-bottom">
         <ul>
@@ -174,6 +177,17 @@ export default {
             flex-wrap: wrap;
             justify-content: flex-start;
             gap: 1rem;
+        } 
+        .load-more {
+            text-align: center;
+            margin: auto;
+            padding: 5rem 2rem;
+            h2 {
+                padding: 1rem;
+                background-color: #0282F9;
+                color: white;
+                text-decoration: upp
+            }
         }
     }
     .card-film {
